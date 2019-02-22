@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chigaze To Do List</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="tdl.css">
+	<style>
+		body{
+			background-image: url("images/beach.jpg");
+			background-repeat: no-repeat;
+			background-position: top right;
+      
+		}
+		
+		
+	</style>
+</head>
+	
+	
+<body>
+<nav>
+		<center><h1 id="l">Chigaze To Do List</h1></center>
+</nav>
+
+<main>
+	<div class="container" id="main-container">
+		        <button type="button" class="btn btn-primary" onclick="addTask()">Add Task</button>
+                 <button type="button" class="btn btn-warning"  onclick="viewTask()">View task</button>
+                      <br><br>                               
+                        <div class="container" id="form-holder">
+                          <form id="form">
+                            <div class="form-group">
+                              <label for="task"><b>Task</b></label>
+                               <input type="text" id="task" >
+                                 </div>
+
+                        <div class="form-group">
+                           <label for="patient"><b>Date</b></label>
+                              <input type="date" id="date" >
+                             </div>
+
+                  <div class="form-group">
+                      <label for="patient"><b>Time</b></label>
+                          <input type="time" id="time" class="form-control" >
+                             </div>
+
+                       <div class="form-group">
+                          <label for="location"><b>Location</b></label>
+                          <input type="text" id="location">
+                          </div>
+
+                          <div class="form-group">
+                                    <label for="activity"><b>Activity</b></label>
+                                    <select id="activity">
+                                        <option>Call</option>
+                                        <option>Email</option>
+                                        <option>Send SMS</option>
+                                      </select>
+                                     </div>
+
+                                <button type="submit" class="btn btn-primary">Save</button>
+                                <button type="button" class="btn btn-secondary" onclick="discardTask()">Cancel</button>
+                         </form>            
+                               </div>      
+                                 <br>    
+
+                 <!---Table-->
+                                    <div class="container-fluid" id="table">
+                  <button type="button" class="btn btn-secondary" onclick="closeTable()" style="float: right;">X</button>
+                  <table class="table table-stripped">
+                    <caption>My List</caption>
+                        <thead>
+                        <tr>
+                          <th>S/N</th>
+                          <th>Task</th>
+                           <th>Date</th>
+                           <th>Time</th>
+                           <th>Location</th>
+                           <th>Activity</th>
+                           <th>Done</th>
+                         </tr>
+
+                  </thead>
+                 <tbody  id="mtable">
+                   <tr id="tRow">
+                      <td>1</td>
+                      <td>Read</td>
+                      <td>20/09/2019</td>
+                      <td>07:00 PM</td>
+                      <td>Imo</td>
+                      <td>Eat</td>
+                      <td><button class="btn btn-primary delete">Done</button></td>
+                  </tr>
+                  </tbody>
+               </table>
+
+                                        
+
+           </div>
+
+
+                                        
+                          
+	</div>
+</main>
+
+<footer>
+ 			<center>consistency @ hardwork will result to success</center>
+ 		</footer>
+
+
+<script src="tdl.js">
+	
+
+</script>
+
+		</body>
+	</html>
